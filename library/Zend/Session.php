@@ -422,8 +422,6 @@ class Zend_Session extends Zend_Session_Abstract
     {
         // Check to see if we've been passed an invalid session ID
         if (self::getId() && !self::_checkId(self::getId())) {
-            // Generate a valid, temporary replacement
-            self::setId(md5(self::getId()));
             // Force a regenerate after session is started
             self::$_regenerateIdState = -1;
         }
