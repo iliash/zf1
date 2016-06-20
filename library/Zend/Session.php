@@ -318,7 +318,7 @@ class Zend_Session extends Zend_Session_Abstract
                 if(self::sessionExists()){
 //                    session_destroy();
 //                    session_start();
-                    session_regenerate_id(true);
+                    session_regenerate_id(false);
                 }
             }
             self::$_regenerateIdState = 1;
